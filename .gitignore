@@ -1,11 +1,10 @@
 # WordPressコアファイル
-/wp-admin/
-/wp-includes/
+app/public/wp-admin/
+app/public/wp-includes/
 
 # 一時ファイルやログ
 *.log
 *.swp
 
 /conf/
-
-wp-content/uploads/
+app/public/wp-content/uploads/

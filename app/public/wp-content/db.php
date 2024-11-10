@@ -1,0 +1,1 @@
+/Users/tokunaga.u/Local Sites/mysiteudemy/app/public/wp-content/plugins/query-monitor/wp-content/db.php
