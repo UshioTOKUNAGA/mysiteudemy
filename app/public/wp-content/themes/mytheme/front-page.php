@@ -2,12 +2,15 @@
 <html lang="ja">
 <head>
   <?php get_header(); ?>
+  <?php
+    if( is_front_page() ) {
+      wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css');
+    }
+  ?>
 
-  
 </head>
 
 <body>
-  
   <?php $args = array('post_type' => 'post'); ?> <!-- post（投稿）のセット -->
   <?php $query = new WP_Query($args) ?> <!-- クエリの作成 -->
 
