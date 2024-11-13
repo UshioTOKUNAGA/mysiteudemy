@@ -15,9 +15,13 @@
 
   <?php if($query->have_posts()): ?>
     <?php while($query->have_posts()): $query->the_post(); ?>
-      <h2><?php the_title(); ?></h2>
-      <p><?php the_excerpt(); ?></p>
-      <p><?php the_time(get_option('date_format')); ?></p>
+      
+      <a href="<?php the_permalink(); ?>">
+        <h2><?php the_title(); ?></h2>
+        <p><?php the_excerpt(); ?></p>
+        <p><?php the_time(get_option('date_format')); ?></p>
+      </a>
+      <?php the_author(); ?>
       <hr>
     <? endwhile; ?>
   <?php else: ?>
