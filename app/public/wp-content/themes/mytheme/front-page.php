@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TOP</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
+  <?php get_header(); ?>
 
-  <?php wp_head(); ?>
+  
 </head>
+
 <body>
   
   <?php $args = array('post_type' => 'post'); ?> <!-- post（投稿）のセット -->
@@ -29,6 +28,6 @@
   <?php endif; ?>
   
 
-  <?php wp_footer(); ?>
+  <?php get_footer(); ?>
 </body>
 </html>
