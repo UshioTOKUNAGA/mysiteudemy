@@ -12,12 +12,16 @@
   
   <?php $args = array('post_type' => 'post'); ?> <!-- post（投稿）のセット -->
   <?php $query = new WP_Query($args) ?> <!-- クエリの作成 -->
-  <?php if ($query->have_posts()): ?> <!-- 投稿があるか -->
-    <?php $query->the_post(); ?>
-    <?php the_title(); ?>
-    <?php wp_reset_postdata(); ?> <!-- グローバルな$postオブジェクトをリセット -->
+
+  <?php if($query->have_posts()): ?>
+    <?php while($query->have_posts()): $query->the_post(); ?>
+      <h2><?php the_title(); ?></h2>
+      <p><?php the_excerpt(); ?></p>
+      <p><?php the_time(get_option('date_format')); ?></p>
+      <hr>
+    <? endwhile; ?>
   <?php else: ?>
-    <p>記事が見つかりませんでした</p>
+    <p>投稿がありません</p>
   <?php endif; ?>
   
 
