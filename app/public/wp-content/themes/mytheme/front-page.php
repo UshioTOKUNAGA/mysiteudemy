@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <title>TOP</title>
   <?php get_header(); ?>
 
   

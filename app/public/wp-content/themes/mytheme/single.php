@@ -3,7 +3,6 @@
 <html lang="ja">
 <head>
   <?php get_header(); ?>
-  <title>Document</title>
 </head>
 
 <body>
