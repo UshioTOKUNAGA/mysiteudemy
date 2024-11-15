@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <?php get_header(); ?>
-  <?php
-    if( is_front_page() ) {
-      wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css');
-    }
-  ?>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?php the_title(); ?></title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
+  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/front-page.css"> -->
 
+  <?php wp_head(); ?>
 </head>
 
 <body>
-  <?php $args = array('post_type' => 'post'); ?> <!-- post（投稿）のセット -->
-  <?php $query = new WP_Query($args) ?> <!-- クエリの作成 -->
+  <header>
+    <div class="header__wrap">
+      <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
+      <label for="hamburger" class="c-hamburger-menu__bg"></label>
+      <h1 class="header__logo">ロゴ</h1>
+      <ul class="header__list">
+        <li class="header__list__item"><a href="">会社概要</a></li>
+        <li class="header__list__item"><a href="">お知らせ</a></li>
+        <li class="header__list__item"><a href="">採用情報</a></li>
+        <li class="header__list__item"><a href="">お問い合わせ</a></li>
+      </ul>
+      <label for="hamburger" class="c-hamburger-menu__button">
+        <span class="c-hamburger-menu__button-mark"></span>
+        <span class="c-hamburger-menu__button-mark"></span>
+        <span class="c-hamburger-menu__button-mark"></span>
+      </label>
+    </div>
+  </header>
 
   <main>
     <div class="notice">
