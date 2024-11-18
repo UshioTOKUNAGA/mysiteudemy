@@ -5,3 +5,7 @@ function read_css(){
   }
 }
 add_action('wp_enqueue_scripts', 'read_css');
+
+add_action('init', function(){
+  add_theme_support('post-thumbnails');
+});
