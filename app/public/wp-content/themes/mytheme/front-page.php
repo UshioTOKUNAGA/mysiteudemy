@@ -11,6 +11,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
+
   <header>
     <div class="header__wrap">
       <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
