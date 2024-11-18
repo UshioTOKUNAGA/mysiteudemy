@@ -10,7 +10,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
   <header>
     <div class="header__wrap">
       <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
