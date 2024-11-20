@@ -14,13 +14,7 @@
     <?php while(have_posts()) : the_post(); ?>
 
       <?php
-        if(has_post_thumbnail()):
-          $id = get_post_thumbnail_id();
-          var_dump($id);
-          $img = wp_get_attachment_image_src($id, 'large');
-        else:
-          $img = array(get_template_directory_uri() . '/img/haikei.png');
-        endif;
+        $img = get_eyecatch_with_default();
       ?>
 
       <h1><?php the_title(); ?></h1>
