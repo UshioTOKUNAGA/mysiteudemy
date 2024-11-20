@@ -19,7 +19,7 @@
       <label for="hamburger" class="c-hamburger-menu__bg"></label>
       <h1 class="header__logo">ロゴ</h1>
       <ul class="header__list">
-        <li class="header__list__item"><a href="">会社概要</a></li>
+        <li class="header__list__item"><a href="<?php echo site_url('/company') ?>">会社概要</a></li>
         <li class="header__list__item"><a href="">お知らせ</a></li>
         <li class="header__list__item"><a href="">採用情報</a></li>
         <li class="header__list__item"><a href="">お問い合わせ</a></li>
