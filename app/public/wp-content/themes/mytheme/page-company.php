@@ -17,8 +17,10 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
-
-  <h1><?php the_title(); ?></h1>
+  <div class="wrap">
+    <h1 class="ttl"><?php the_title(); ?></h1>
+    <?php the_content(); ?>
+  </div>
 
   <?php wp_footer(); ?>
 </body>
