@@ -19,6 +19,8 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
+  <?php get_header(); ?>
+
   <main>
     <h1 class="ttl"><?php the_title(); ?></h1>
     <div class="wrap">

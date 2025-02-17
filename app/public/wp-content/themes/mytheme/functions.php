@@ -1,11 +1,13 @@
 <?php
 function read_css()
 {
+  wp_enqueue_style('header-css', get_template_directory_uri() . '/css/header.css');
+  
   if (is_front_page()) {
-    wp_enqueue_style('front-page-style', get_template_directory_uri() . '/css/front-page.css');
+    wp_enqueue_style('front-page-css', get_template_directory_uri() . '/css/front-page.css');
   }
   if (is_page('company')) {
-    wp_enqueue_style('company', get_template_directory_uri() . '/css/company.css');
+    wp_enqueue_style('company-css', get_template_directory_uri() . '/css/company.css');
   }
 }
 add_action('wp_enqueue_scripts', 'read_css');
