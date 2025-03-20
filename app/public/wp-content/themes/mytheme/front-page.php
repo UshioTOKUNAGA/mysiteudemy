@@ -16,7 +16,7 @@
   <?php get_header(); ?>
 
   <main>
-    <div class="notice">
+    <section class="notice">
       <h2 class="notice__ttl">お知らせ</h2>
       <div class="notice__lists">
         <?php $args = array('post_type' => 'post'); ?> <!-- post（投稿）のセット -->
@@ -33,7 +33,7 @@
         <?php endif; ?>
       </div>
       <button class="notice__btn" onclick="location.href=''" type="button">お知らせ一覧</button>
-    </div>
+    </section>
   </main>
 
   <footer>
