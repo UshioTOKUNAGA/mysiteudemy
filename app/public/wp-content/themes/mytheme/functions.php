@@ -2,6 +2,7 @@
 function read_css()
 {
   wp_enqueue_style('header-css', get_template_directory_uri() . '/css/header.css');
+  wp_enqueue_style('global-css', get_template_directory_uri() . '/css/global.css');
   
   if (is_front_page()) {
     wp_enqueue_style('front-page-css', get_template_directory_uri() . '/css/front-page.css');
