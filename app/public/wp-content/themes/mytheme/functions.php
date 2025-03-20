@@ -30,3 +30,27 @@ function get_eyecatch_with_default()
 
   return $img;
 }
+
+add_action('init', 'create_post_type');
+add_theme_support('post-thumbnails'); //!!!thumbnail（アイキャッチ画像）の有効化
+function create_post_type() {
+  register_post_type(
+    'news', //カスタム投稿タイプ名、スラッグ
+    array(
+        'label' => 'お知らせ', //カスタム投稿タイプ名の管理画面上の表示名
+        'public' => true, //管理画面上に表示するか
+        'has_archive' => true, //投稿した記事の一覧ページを作成する
+        'menu_position' => 5, //管理画面メニューでの表示位置。'5':投稿の下。
+        'show_in_rest' => true, //ブロックエディタで使用できるようにする
+        'supports' => array(
+            //サポートする機能をここに記述していく
+            'title', //タイトル
+            'editor', //エディタ
+            'thumbnail', //!!!
+            'revisions', //変更を保存
+            'author', //作成者
+            'excerpt', //抜粋
+        ),
+    )
+  );
+}
