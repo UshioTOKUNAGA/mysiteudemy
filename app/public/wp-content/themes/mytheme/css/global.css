@@ -1,6 +1,5 @@
-h1 {
-  font-size: 32px;
-  font-weight: 400;
+p {
+  font-size: 50px;
 }
 
 .wrap {
@@ -14,7 +13,7 @@ h1 {
 
 .ttl {
   font-weight: 700;
-  font-size: 28px;
+  font-size: 50px;
   margin-top: 100px;
 }
 

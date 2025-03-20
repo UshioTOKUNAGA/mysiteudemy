@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php the_title(); ?></title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
-  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/front-page.css"> -->
+  
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- /jQuery -->
+  <!-- slick CSS -->
+  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css" media="screen" />
+  <!-- /slick CSS -->
 
   <?php wp_head(); ?>
 </head>
@@ -16,8 +23,13 @@
   <?php get_header(); ?>
 
   <main>
+    <ul class="mv-area">
+      <li><img src="<?php echo get_template_directory_uri(); ?>/img/top/mv1.jpg" alt=""></li>
+      <li><img src="<?php echo get_template_directory_uri(); ?>/img/top/mv2.jpg" alt=""></li>
+    </ul>
+
     <section class="notice">
-      <h2 class="notice__ttl">お知らせ</h2>
+      <h1 class="ttl">お知らせ</h1>
       <div class="notice__lists">
         <?php $args = array('post_type' => 'news'); ?> <!-- post（投稿）のセット -->
         <?php $query = new WP_Query($args) ?> <!-- クエリの作成 -->

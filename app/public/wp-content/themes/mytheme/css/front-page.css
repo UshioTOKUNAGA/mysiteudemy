@@ -1,6 +1,25 @@
 body {
   font-family: Inter;
 }
+/* mv */
+.mv-area li img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.slick-prev {
+  left: 30px !important;
+}
+.slick-next {
+  right: 30px !important;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+.slick-arrow {
+  z-index: 1;
+}
 
 /**********************
 notice
