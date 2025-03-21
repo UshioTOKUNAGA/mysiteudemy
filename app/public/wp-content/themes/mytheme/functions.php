@@ -13,8 +13,14 @@ function read_css()
   if (is_page('contact')) {
     wp_enqueue_style('contact-css', get_template_directory_uri() . '/css/contact.css');
   }
+  if (is_page('recruit')) {
+    wp_enqueue_style('recruit-css', get_template_directory_uri() . '/css/recruit.css');
+  }
   if (is_singular('news')) {
     wp_enqueue_style('single-news-css', get_template_directory_uri() . '/css/single-news.css');
+  }
+  if (is_singular('interview')) {
+    wp_enqueue_style('interview-news-css', get_template_directory_uri() . '/css/single-interview.css');
   }
 }
 add_action('wp_enqueue_scripts', 'read_css');
@@ -43,22 +49,42 @@ function create_post_type() {
   register_post_type(
     'news', //カスタム投稿タイプ名、スラッグ
     array(
-        'label' => 'お知らせ', //カスタム投稿タイプ名の管理画面上の表示名
-        'public' => true, //管理画面上に表示するか
-        'has_archive' => true, //投稿した記事の一覧ページを作成する
-        'menu_position' => 5, //管理画面メニューでの表示位置。'5':投稿の下。
-        'show_in_rest' => true, //ブロックエディタで使用できるようにする
-        'supports' => array(
-            //サポートする機能をここに記述していく
-            'title', //タイトル
-            'editor', //エディタ
-            'thumbnail', //!!!
-            'revisions', //変更を保存
-            'author', //作成者
-            'excerpt', //抜粋
-        ),
+      'label' => 'お知らせ', //カスタム投稿タイプ名の管理画面上の表示名
+      'public' => true, //管理画面上に表示するか
+      'has_archive' => true, //投稿した記事の一覧ページを作成する
+      'menu_position' => 5, //管理画面メニューでの表示位置。'5':投稿の下。
+      'show_in_rest' => true, //ブロックエディタで使用できるようにする
+      'supports' => array(
+          //サポートする機能をここに記述していく
+          'title', //タイトル
+          'editor', //エディタ
+          'thumbnail', //!!!
+          'revisions', //変更を保存
+          'author', //作成者
+          'excerpt', //抜粋
+      ),
     )
   );
+  register_post_type(
+    'interview', //カスタム投稿タイプ名、スラッグ
+    array(
+      'label' => 'インタビュー', //カスタム投稿タイプ名の管理画面上の表示名
+      'public' => true, //管理画面上に表示するか
+      'has_archive' => true, //投稿した記事の一覧ページを作成する
+      'menu_position' => 5, //管理画面メニューでの表示位置。'5':投稿の下。
+      'show_in_rest' => true, //ブロックエディタで使用できるようにする
+      'supports' => array(
+          //サポートする機能をここに記述していく
+          'title', //タイトル
+          'editor', //エディタ
+          'thumbnail', //!!!
+          'revisions', //変更を保存
+          'author', //作成者
+          'excerpt', //抜粋
+      ),
+    )
+  );
+
 }
 
 function enqueue_custom_slick_script() {
