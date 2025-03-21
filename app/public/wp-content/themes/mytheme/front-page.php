@@ -31,7 +31,10 @@
     <section class="notice">
       <h1 class="ttl">お知らせ</h1>
       <div class="notice__lists">
-        <?php $args = array('post_type' => 'news'); ?> <!-- post（投稿）のセット -->
+        <?php $args = array(
+          'post_type' => 'news',
+          'posts_per_page' => 5
+        ); ?> <!-- post（投稿）のセット -->
         <?php $query = new WP_Query($args) ?> <!-- クエリの作成 -->
         <?php if($query->have_posts()): ?>
           <?php while($query->have_posts()): $query->the_post(); ?>
