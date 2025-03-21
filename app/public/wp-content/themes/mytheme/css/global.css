@@ -70,7 +70,7 @@ header {
 notice
 **********************/
 .notice {
-  margin-top: 248px;
+  margin-top: 150px;
   width: calc(100% - 240px);
   max-width: 1200px;
   margin-inline: auto;
