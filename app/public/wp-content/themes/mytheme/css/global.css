@@ -103,6 +103,9 @@ notice
   font-weight: 500;
   line-height: 21.78px;
 }
+.notice__lists__item__txt--ttl:hover {
+  background-color: blueviolet;
+}
 .notice__btn {
   width: 267px;
   height: 44px;
@@ -115,6 +118,9 @@ notice
   font-size: 24px;
   font-weight: 400;
   line-height: 29.05px;
+}
+.notice__btn:hover {
+  background-color: blueviolet;
 }
 
 /**********************
