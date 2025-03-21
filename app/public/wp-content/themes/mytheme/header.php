@@ -7,7 +7,7 @@
       <li class="header__list__item"><a href="<?php echo site_url('/company') ?>">会社概要</a></li>
       <li class="header__list__item"><a href="<?php echo site_url('/news') ?>">お知らせ</a></li>
       <li class="header__list__item"><a href="<?php echo site_url('/recruit') ?>">採用情報</a></li>
-      <li class="header__list__item"><a href="">お問い合わせ</a></li>
+      <li class="header__list__item"><a href="<?php echo site_url('/contact') ?>">お問い合わせ</a></li>
     </ul>
     <label for="hamburger" class="c-hamburger-menu__button">
       <span class="c-hamburger-menu__button-mark"></span>

@@ -1,0 +1,31 @@
+.ttl {
+  text-align: center;
+}
+
+form {
+  margin-top: 80px;
+}
+
+p {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+input {
+  border: solid 2px black;
+}
+
+textarea {
+  border: solid 2px black;
+}
+
+.wpcf7-submit {
+  color: white;
+  background-color: gray;
+  border: initial;
+  padding: 10px;
+  margin-top: 10px;
+}
+.wpcf7-submit:hover {
+  background-color: blueviolet;
+}

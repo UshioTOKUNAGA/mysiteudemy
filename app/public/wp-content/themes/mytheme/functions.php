@@ -10,6 +10,9 @@ function read_css()
   if (is_page('company')) {
     wp_enqueue_style('company-css', get_template_directory_uri() . '/css/company.css');
   }
+  if (is_page('contact')) {
+    wp_enqueue_style('contact-css', get_template_directory_uri() . '/css/contact.css');
+  }
   if (is_singular('news')) {
     wp_enqueue_style('single-news-css', get_template_directory_uri() . '/css/single-news.css');
   }
