@@ -39,7 +39,7 @@
           <p>投稿がありません</p>
         <?php endif; ?>
       </div>
-      <button class="notice__btn" onclick="location.href=''" type="button">お知らせ一覧</button>
+      <!-- <button class="notice__btn" onclick="location.href=''" type="button">お知らせ一覧</button> -->
     </section>
   </main>
 
