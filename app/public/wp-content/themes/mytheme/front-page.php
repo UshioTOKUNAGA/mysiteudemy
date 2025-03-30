@@ -29,27 +29,29 @@
       <li><img src="<?php echo get_template_directory_uri(); ?>/img/top/mv2.jpg" alt=""></li>
     </ul>
 
-    <section class="notice">
-      <h1 class="ttl">お知らせ</h1>
-      <div class="notice__lists">
-        <?php $args = array(
-          'post_type' => 'news',
-          'posts_per_page' => 5
-        ); ?> <!-- post（投稿）のセット -->
-        <?php $query = new WP_Query($args) ?> <!-- クエリの作成 -->
-        <?php if($query->have_posts()): ?>
-          <?php while($query->have_posts()): $query->the_post(); ?>
-            <a class="notice__lists__item" href="<?php the_permalink(); ?>">
-              <p class="notice__lists__item__txt--date"><?php the_time('Y年m月d日'); ?></p>
-              <p class="notice__lists__item__txt--ttl"><?php the_title(); ?></p>
-            </a>
-          <? endwhile; ?>
-        <?php else: ?>
-          <p>投稿がありません</p>
-        <?php endif; ?>
-      </div>
-      <button class="notice__btn" onclick="location.href='<?php echo site_url('/news') ?>'" type="button">お知らせ一覧</button>
-    </section>
+    <div class="wrap">
+      <section class="notice">
+        <h1 class="ttl">お知らせ</h1>
+        <div class="notice__lists">
+          <?php $args = array(
+            'post_type' => 'news',
+            'posts_per_page' => 5
+          ); ?> <!-- post（投稿）のセット -->
+          <?php $query = new WP_Query($args) ?> <!-- クエリの作成 -->
+          <?php if($query->have_posts()): ?>
+            <?php while($query->have_posts()): $query->the_post(); ?>
+              <a class="notice__lists__item" href="<?php the_permalink(); ?>">
+                <p class="notice__lists__item__txt--date"><?php the_time('Y年m月d日'); ?></p>
+                <p class="notice__lists__item__txt--ttl"><?php the_title(); ?></p>
+              </a>
+            <? endwhile; ?>
+          <?php else: ?>
+            <p>投稿がありません</p>
+          <?php endif; ?>
+        </div>
+        <button class="notice__btn" onclick="location.href='<?php echo site_url('/news') ?>'" type="button">お知らせ一覧</button>
+      </section>
+    </div>
   </main>
 
   <?php wp_footer(); ?>

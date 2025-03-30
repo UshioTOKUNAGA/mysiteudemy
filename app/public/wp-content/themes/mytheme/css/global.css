@@ -1,24 +1,29 @@
+body {
+  font-family: Inter;
+}
+
 p {
   font-size: 50px;
 }
 
-.wrap {
-  max-width: 1200px;
-  margin-inline: auto;
+.ttl {
+  font-weight: 700;
+  font-size: 50px;
+  font-size: 3.3rem;
+  margin-top: 100px;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .mvArea {
   text-align: center;
 }
 
-.ttl {
-  font-weight: 700;
-  font-size: 50px;
-  margin-top: 100px;
-}
-
-a:hover {
-  text-decoration: underline;
+.wrap {
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 /**********************
@@ -135,63 +140,6 @@ header {
 }
 
 /**********************
-notice
-**********************/
-.notice {
-  margin-top: 150px;
-  width: calc(100% - 240px);
-  max-width: 1200px;
-  margin-inline: auto;
-}
-.notice__ttl {
-  font-family: Inter;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 33.89px;
-}
-.notice__lists {
-  margin-top: 41px;
-  margin-left: 34px;
-}
-.notice__lists__item {
-  display: flex;
-  column-gap: 32px;
-}
-.notice__lists__item:not(:first-child) {
-  margin-top: 24px;
-}
-.notice__lists__item__txt--date {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.78px;
-  text-align: center;
-}
-.notice__lists__item__txt--ttl {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 21.78px;
-}
-.notice__lists__item__txt--ttl:hover {
-  background-color: blueviolet;
-}
-.notice__btn {
-  width: 267px;
-  height: 44px;
-  background-color: #d9d9d9;
-  text-align: center;
-  margin-top: 50px;
-  display: block;
-  margin-inline: auto;
-
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 29.05px;
-}
-.notice__btn:hover {
-  background-color: blueviolet;
-}
-
-/**********************
 footer
 **********************/
 footer {
@@ -242,4 +190,33 @@ footer {
   line-height: 16.94px;
   text-align: center;
   margin-top: 29px;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    margin-top: 50px;
+  }
+  .footer__inner1200 {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer__left {
+    margin: 0 auto;
+  }
+  .footer__logo {
+    margin: 0 auto;
+  }
+  .footer__snsLinks {
+    justify-content: center;
+  }
+  .footer__menu {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+  }
+  .footer__menu__item:not(:first-child) {
+    margin-top: 0;
+  }
 }

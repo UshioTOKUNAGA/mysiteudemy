@@ -1,6 +1,6 @@
 <footer>
   <div class="footer__inner1200">
-    <div>
+    <div class="footer__left">
       <h1 class="footer__logo">会社ロゴ</h1>
       <p class="footer__adress">
         〒104-0061<br>
