@@ -13,6 +13,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css" media="screen" />
   <!-- /slick CSS -->
+  
 
   <?php wp_head(); ?>
 </head>
@@ -52,6 +53,13 @@
   </main>
 
   <?php wp_footer(); ?>
+
+  <script>
+    $(".hamburger").click(function() {
+      $(".menu").toggleClass("is-active");
+      $(".hamburger").toggleClass("is-active");
+    });
+  </script>
 
   <?php get_footer(); ?>
 </body>
