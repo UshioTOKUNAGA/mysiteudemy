@@ -1,3 +1,7 @@
+.inner {
+  padding: 0 5%;
+}
+
 .ttl {
   text-align: center;
 }
@@ -13,10 +17,12 @@ p {
 
 input {
   border: solid 2px black;
+  width: 60%;
 }
 
 textarea {
   border: solid 2px black;
+  width: calc(100% - 20px);
 }
 
 .wpcf7-submit {
@@ -25,7 +31,23 @@ textarea {
   border: initial;
   padding: 10px;
   margin-top: 10px;
+  width: 100px;
+  text-align: center;
 }
 .wpcf7-submit:hover {
   background-color: blueviolet;
+}
+
+@media screen and (max-width: 768px) {
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  input {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+  }
 }

@@ -16,7 +16,7 @@
   <?php get_header(); ?>
 
   <main>
-    <div class="wrap">
+    <div class="wrap_single-interview">
       <h1 class="ttl"><?php the_title(); ?></h1>
       <div class="mv">
         <img src="<?php the_field('prof-img'); ?>" >

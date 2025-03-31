@@ -1,3 +1,7 @@
+.wrap_single-interview {
+  padding: 0 5%;
+}
+
 .mv {
   margin-top: 30px;
   text-align: center;
@@ -8,4 +12,22 @@
 .txts {
   margin-top: 30px;
   font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrap_single-interview .ttl {
+    text-align: center;
+  }
+  .mv img {
+    width: 50%;
+  }
+  .wrap_single-interview .txts {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .mv img {
+    width: 60%;
+  }
 }
